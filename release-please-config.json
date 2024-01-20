@@ -1,0 +1,14 @@
+{
+  "packages": {
+    ".": {}
+  },
+  "release-type": "go",
+  "bump-minor-pre-major": true,
+  "extra-files": [
+    {
+      "type": "toml",
+      "path": "Project.toml",
+      "jsonpath": "$.version"
+    }
+  ]
+}
