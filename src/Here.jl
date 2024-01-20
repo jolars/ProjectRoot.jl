@@ -2,19 +2,8 @@ module Here
 
 using FilePathsBase
 
-"""
-    iam()
-
-This function returns the current directory path. It checks for the presence of certain files or directories 
-(".here", "Project.toml", "Manifest.toml", ".git", ".svn") in the current directory and its parent directories. 
-If any of these files or directories are found, the function returns the path of that directory. 
-If none of these files or directories are found after traversing up to the root directory, 
-the function throws an error "Project root not found".
-"""
-function iam()
-  current_dir = @__DIR__
-
-  patterns = [
+function find_root_dir(current_dir=@__DIR__)
+    patterns = [
     Dict(".here" => :file),
     Dict("Project.toml" => :file),
     Dict("Manifest.toml" => :file),
@@ -41,9 +30,9 @@ end
     here(args...)
 
 This function constructs paths relative to the project root. It takes any number of arguments, 
-which represent the path components, and joins them with the path returned by the `iam()` function.
+which represent the path components.
 """
-here(args...) = joinpath(iam(), args...)
+here(args...) = joinpath(find_root_dir(), args...)
 
 export here
 
