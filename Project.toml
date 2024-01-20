@@ -1,7 +1,10 @@
 name = "Here"
 uuid = "d369ecc7-d25b-440f-ae65-7e57382d5ce8"
 authors = ["Johan Larsson <johanlarsson@outlook.com> and contributors"]
-version = "1.0.0-DEV"
+version = "0.1.0"
+
+[deps]
+FilePathsBase = "48062228-2e41-5def-b9a4-89aafe57970f"
 
 [compat]
 julia = "1"
