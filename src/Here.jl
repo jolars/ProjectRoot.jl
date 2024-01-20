@@ -1,5 +1,3 @@
-[insert]
-
 module Here
 
 using FilePathsBase
@@ -50,4 +48,3 @@ here(args...) = joinpath(iam(), args...)
 export here
 
 end
-```
