@@ -13,7 +13,7 @@ using Test
     println(file, "using Here;print(@here())")
     close(file)
 
-    out = read(`julia $script_file`, String)
+    out = read(`julia --project=. $script_file`, String)
 
     @test out == dir
   end
