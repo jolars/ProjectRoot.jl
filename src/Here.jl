@@ -40,7 +40,7 @@ relative to the root directory of the project.
 The root directory is determined by the `find_root_dir` function. 
 If the macro is called from the Julia REPL, it uses the current working directory as the starting point.
 """
-macro here(args...)
+macro here(args::String...)
   current_dir = String(__source__.file)
   if startswith(current_dir, "REPL")
     current_dir = pwd()
