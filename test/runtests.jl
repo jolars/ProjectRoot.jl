@@ -14,7 +14,6 @@ using Test
     close(file)
 
     out = read(`julia $script_file`, String)
-    print(out)
 
     @test out == dir
   end
