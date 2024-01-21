@@ -1,3 +1,9 @@
+"""
+    module Here
+
+This module provides a function and a macro to find the root directory of a project.
+It uses certain file and directory patterns to identify the root directory.
+"""
 module Here
 
 using FilePathsBase
@@ -27,10 +33,12 @@ function find_root_dir(current_dir)
 end
 
 """
-    here(args...)
+    @here(args...)
 
-This function constructs paths relative to the project root. It takes any number of arguments, 
-which represent the path components.
+This macro returns the absolute path of the file or directory specified by `args...` 
+relative to the root directory of the project. 
+The root directory is determined by the `find_root_dir` function. 
+If the macro is called from the Julia REPL, it uses the current working directory as the starting point.
 """
 macro here(args...)
   current_dir = String(__source__.file)
