@@ -7,7 +7,7 @@ version = "0.1.0"
 FilePathsBase = "48062228-2e41-5def-b9a4-89aafe57970f"
 
 [compat]
-julia = "1"
+julia = "1.6"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
