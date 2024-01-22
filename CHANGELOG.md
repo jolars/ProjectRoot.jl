@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.2.0](https://github.com/jolars/ProjectRoot.jl/compare/v0.1.0...v0.2.0) (2024-01-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* change name to ProjectRoot
+
+### Features
+
+* change name to ProjectRoot ([39607e4](https://github.com/jolars/ProjectRoot.jl/commit/39607e428af54ba1b7b653a08e42b99b1b21a8ba))
+
 ## [0.1.0](https://github.com/jolars/ProjectRoot.jl/compare/v0.0.1...v0.1.0) (2024-01-22)
 
 ### ⚠ BREAKING CHANGES
