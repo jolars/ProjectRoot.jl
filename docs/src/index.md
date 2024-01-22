@@ -28,10 +28,10 @@ MyProject
 └── Project.toml
 ```
 
-If you want to import `B.jl` from `A.jl`, all you need to do is this:
+If you want to include `B.jl` from `A.jl`, all you need to do is this:
 
 ```julia
-import(@here("src", "B.jl"))
+include(@here("src", "B.jl"))
 ```
 
 Now, calling `A.jl` from anywhere in your project will work as expected. And if you move `A.jl` to another folder, say `scripts/subfolder`, the import will still work.
