@@ -42,27 +42,10 @@ Now, calling `A.jl` from anywhere in your project will work as expected. And if 
 
 `@here` also handles calling lines from `A.jl` through the REPL, by fetching the current working directory.
 
-## How Does it Work?
+## Contributing
 
-The `@here` macro works by fetching the current file from where it is called and then recursively search upwards in the file hierarchy until it finds one of the following:
+When writing commit messages, please use the [conventional commits format](https://www.conventionalcommits.org/en/v1.0.0/).
 
-1. A `.here` file
-2. A `Project.toml` file
-3. A `JuliaProject.toml` file
-4. A `Manifest.toml` file
-5. A `.git` folder
-6. A `.svn` folder
+## Versioning
 
-It stops searching when it finds one of these files or when you reach the root of the file system.
-
-The `.here` file is just a file that allows you to manually specify the root of your project and its contents will be ignored.
-
-If `@here` is called from the REPL, it will instead simply return the current working directory (result of calling `pwd()`).
-
-## Acknowledgements
-
-This package is mostly a direct port of the R package [here](https://here.r-lib.org/).
-
-## Alternatives
-
-The excellent [DrWatson.jl](https://github.com/JuliaDynamics/DrWatson.jl) package provides the same functionality as **ProjectRoot** but also much more. The motivation for this package was to provide a simpler alternative for those who do not need all the bells and whistles.
+ProjectRoot uses [semantic versioning](https://semver.org).
