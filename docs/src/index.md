@@ -61,4 +61,4 @@ This package is mostly a direct port of the R package [here](https://here.r-lib.
 
 ## Alternatives
 
-The excellent [DrWatson.jl](https://github.com/JuliaDynamics/DrWatson.jl) package provides the same functionality as **Here** but also much more. The motivation for this package was to provide a simpler alternative for those who do not need all the bells and whistles.
+The excellent [DrWatson.jl](https://github.com/JuliaDynamics/DrWatson.jl) package provides the same functionality as **ProjectRoot** but also much more. The motivation for this package was to provide a simpler alternative for those who do not need all the bells and whistles.
