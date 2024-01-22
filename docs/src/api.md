@@ -2,5 +2,5 @@
 
 ```@docs
 Here.Here
-@here(args...)
+Here.@here
 ```
