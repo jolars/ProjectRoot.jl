@@ -1,5 +1,6 @@
 # Here
-
+[![](https://img.shields.io/badge/docs-stable-blue.svg)](https://jolars.github.io/Here.jl/stable)
+[![](https://img.shields.io/badge/docs-dev-blue.svg)](https://jolars.github.io/Here.jl/dev)
 [![Build Status](https://github.com/jolars/Here.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/jolars/Here.jl/actions/workflows/CI.yml?query=branch%3Amain)
 
 A package for Julia that provides easy file-referencing for project-oriented workflows.
