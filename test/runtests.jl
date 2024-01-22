@@ -2,7 +2,7 @@ using Here
 using Test
 
 @testset "Here.jl" begin
-  here = @here()
+  here = Here.@here()
 
   @test endswith(here, "Here")
 
@@ -23,3 +23,5 @@ using Test
   end
 
 end
+
+include(@here("test", "aqua.jl"))
