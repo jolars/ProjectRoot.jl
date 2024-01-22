@@ -1,4 +1,4 @@
-# Here.jl
+# ProjectRoot.jl
 
 A package for Julia that provides easy file-referencing for project-oriented workflows.
 
@@ -8,7 +8,7 @@ You can install the package using the Julia package manager from the source code
 
 ```julia
 using Pkg
-Pkg.add("https://github.com/jolars/Here.jl")
+Pkg.add("https://github.com/jolars/ProjectRoot.jl")
 ```
 
 A stable release will be available on the Julia package registry soon.
@@ -44,9 +44,10 @@ The `@here` macro works by fetching the current file from where it is called and
 
 1. A `.here` file
 2. A `Project.toml` file
-3. A `Manifest.toml` file
-4. A `.git` folder
-5. A `.svn` folder
+3. A `JuliaProject.toml` file
+4. A `Manifest.toml` file
+5. A `.git` folder
+6. A `.svn` folder
 
 It stops searching when it finds one of these files or when you reach the root of the file system.
 

@@ -1,17 +1,17 @@
 using Documenter
-using Here
+using ProjectRoot
 
 makedocs(
-  sitename = "Here",
-  format = Documenter.HTML(),
-  modules = [Here],
-  pages = [
+  sitename="ProjectRoot",
+  format=Documenter.HTML(),
+  modules=[ProjectRoot],
+  pages=[
     "Home" => "index.md",
     "API Reference" => "api.md"
   ]
 )
 
 deploydocs(
-  repo = "https://github.com/jolars/Here.jl.git"
+  repo="https://github.com/jolars/ProjectRoot.jl.git"
 )
 

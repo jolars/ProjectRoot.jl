@@ -1,9 +1,9 @@
 """
-    module Here
+    module ProjectRoot
 
 This module provides a macro to build paths relative to the root directory of the project.
 """
-module Here
+module ProjectRoot
 
 using FilePathsBase
 
@@ -11,6 +11,7 @@ function find_root(dir::String)
   patterns = [
     Dict(".here" => :file),
     Dict("Project.toml" => :file),
+    Dict("JuliaProject.toml" => :file),
     Dict("Manifest.toml" => :file),
     Dict(".git" => :dir),
     Dict(".svn" => :dir)

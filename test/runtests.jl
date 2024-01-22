@@ -1,10 +1,10 @@
-using Here
+using ProjectRoot
 using Test
 
-@testset "Here.jl" begin
-  here = Here.@here()
+@testset "ProjectRoot.jl" begin
+  here = ProjectRoot.@here()
 
-  @test endswith(here, "Here") || endswith(here, "Here.jl")
+  @test endswith(here, "ProjectRoot") || endswith(here, "ProjectRoot.jl")
 
   mktempdir() do dir
     # Create a .here file in the temporary directory
@@ -14,7 +14,7 @@ using Test
     touch(script_file)
 
     file = open(script_file, "w")
-    println(file, "using Here;print(@here())")
+    println(file, "using ProjectRoot;print(@here())")
     close(file)
 
     out = read(`julia --project=. $script_file`, String)

@@ -1,6 +1,6 @@
 # API Reference
 
 ```@docs
-Here.Here
-Here.@here
+ProjectRoot.ProjectRoot
+ProjectRoot.@here
 ```

@@ -1,5 +1,5 @@
-name = "Here"
-uuid = "d369ecc7-d25b-440f-ae65-7e57382d5ce8"
+name = "ProjectRoot"
+uuid = "e3f974f6-674d-4b8e-a3d1-5850677db852"
 authors = ["Johan Larsson <johanlarsson@outlook.com> and contributors"]
 version = "0.1.0"
 
