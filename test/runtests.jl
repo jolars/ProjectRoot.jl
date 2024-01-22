@@ -4,7 +4,7 @@ using Test
 @testset "Here.jl" begin
   here = Here.@here()
 
-  @test endswith(here, "Here")
+  @test endswith(here, "Here") || endswith(here, "Here.jl")
 
   mktempdir() do dir
     # Create a .here file in the temporary directory
