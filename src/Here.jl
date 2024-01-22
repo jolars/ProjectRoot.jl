@@ -7,7 +7,7 @@ module Here
 
 using FilePathsBase
 
-function find_root(dir)
+function find_root(dir::String)
   patterns = [
     Dict(".here" => :file),
     Dict("Project.toml" => :file),
