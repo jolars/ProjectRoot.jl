@@ -2,6 +2,10 @@ using Here
 using Test
 
 @testset "Here.jl" begin
+  here = @here()
+
+  @test endswith(here, "Here")
+
   mktempdir() do dir
     # Create a .here file in the temporary directory
     touch(joinpath(dir, ".here"))
@@ -17,4 +21,5 @@ using Test
 
     @test out == dir
   end
+
 end
