@@ -9,7 +9,7 @@ using FilePathsBase
 
 function find_root(dir::String)
   patterns = [
-    Dict(".here" => :file),
+    Dict(".projectroot" => :file),
     Dict("Project.toml" => :file),
     Dict("JuliaProject.toml" => :file),
     Dict("Manifest.toml" => :file),

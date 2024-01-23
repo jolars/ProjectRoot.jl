@@ -42,7 +42,7 @@ Now, calling `A.jl` from anywhere in your project will work as expected. And if 
 
 The `@projectroot` macro works by fetching the current file from where it is called and then recursively search upwards in the file hierarchy until it finds one of the following:
 
-1. A `.here` file
+1. A `.projectroot` file
 2. A `Project.toml` file
 3. A `JuliaProject.toml` file
 4. A `Manifest.toml` file
@@ -51,7 +51,7 @@ The `@projectroot` macro works by fetching the current file from where it is cal
 
 It stops searching when it finds one of these files or when you reach the root of the file system.
 
-The `.here` file is just a file that allows you to manually specify the root of your project and its contents will be ignored.
+The `.projectroot` file is just a file that allows you to manually specify the root of your project and its contents will be ignored.
 
 If `@projectroot` is called from the REPL, it will instead simply return the current working directory (result of calling `pwd()`).
 

@@ -7,8 +7,8 @@ using Test
   @test endswith(here, "ProjectRoot") || endswith(here, "ProjectRoot.jl")
 
   mktempdir() do dir
-    # Create a .here file in the temporary directory
-    touch(joinpath(dir, ".here"))
+    # Create a .projectroot file in the temporary directory
+    touch(joinpath(dir, ".projectroot"))
 
     script_file = joinpath(dir, "script.jl")
     touch(script_file)
