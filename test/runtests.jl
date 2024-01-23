@@ -4,7 +4,7 @@ using Test
 @testset "ProjectRoot.jl" begin
   project_root = @projectroot()
 
-  @test endswith(here, "ProjectRoot") || endswith(here, "ProjectRoot.jl")
+  @test endswith(project_root, "ProjectRoot") || endswith(project_root, "ProjectRoot.jl")
 
   mktempdir() do dir
     # Create a .projectroot file in the temporary directory
