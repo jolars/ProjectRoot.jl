@@ -59,6 +59,8 @@ If `@projectroot` is called from the REPL, it will instead simply return the cur
 
 This package is inspired by similar packages for other languages, such as the R package [here](https://here.r-lib.org/) and the Python package [pyprojroot](https://pypi.org/project/pyprojroot/).
 
+The logo is a modified version of an [image by macrovector on Freepik](https://www.freepik.com/free-vector/old-dark-trees-with-roots-dead-forest-trees-black-silhouette-dead-tree-illustration_13422920.htm#query=roots&position=1&from_view=keyword&track=sph&uuid=3396f5e2-c3d2-416a-bc83-c88226ba85a7).
+
 ## Alternatives
 
 The excellent [DrWatson.jl](https://github.com/JuliaDynamics/DrWatson.jl) package provides the same functionality as **ProjectRoot** but also much more. The motivation for this package was to provide a simpler alternative for those who do not need all the bells and whistles.
