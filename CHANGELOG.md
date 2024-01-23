@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.3.0](https://github.com/jolars/ProjectRoot.jl/compare/v0.2.0...v0.3.0) (2024-01-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* use .projectroot file instead of .here
+* change @here to @projectroot
+
+### Features
+
+* change [@here](https://github.com/here) to [@projectroot](https://github.com/projectroot) ([163b632](https://github.com/jolars/ProjectRoot.jl/commit/163b632868edcefb8439883cacf9d20cd9cd522e))
+* use .projectroot file instead of .here ([d07aa8a](https://github.com/jolars/ProjectRoot.jl/commit/d07aa8ac39834e2e42de6b9f5068f198fa3618bb))
+
+
+### Bug Fixes
+
+* **tests:** here -&gt; project_root ([3f08cc8](https://github.com/jolars/ProjectRoot.jl/commit/3f08cc85da9f5bdee6fe702d76b4f8388ac3545f))
+
 ## [0.2.0](https://github.com/jolars/ProjectRoot.jl/compare/v0.1.0...v0.2.0) (2024-01-22)
 
 
