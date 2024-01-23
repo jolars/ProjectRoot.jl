@@ -1,13 +1,21 @@
 using Documenter
 using ProjectRoot
 
+# Copy CHANGELOG.md to docs/src/CHANGELOG.md
+cp(
+  joinpath(@__DIR__, "../CHANGELOG.md"),
+  joinpath(@__DIR__, "src/CHANGELOG.md");
+  force=true
+)
+
 makedocs(
   sitename="ProjectRoot",
   format=Documenter.HTML(),
   modules=[ProjectRoot],
   pages=[
     "Home" => "index.md",
-    "API Reference" => "api.md"
+    "API Reference" => "api.md",
+    "Changelog" => "CHANGELOG.md",
   ]
 )
 
