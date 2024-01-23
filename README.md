@@ -1,4 +1,4 @@
-# ProjectRoot <a href="https://jolars.github.io/ProjectRoot/"><img src='src/assets/logo.svg' align="right" height="139" /></a>
+# ProjectRoot <a href="https://jolars.github.io/ProjectRoot.jl/"><img src='src/assets/logo.svg' align="right" height="139" /></a>
 
 [![](https://img.shields.io/badge/docs-stable-blue.svg)](https://jolars.github.io/ProjectRoot.jl/stable)
 [![](https://img.shields.io/badge/docs-dev-blue.svg)](https://jolars.github.io/ProjectRoot.jl/dev)
