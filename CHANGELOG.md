@@ -5,7 +5,7 @@
 ### ⚠ BREAKING CHANGES
 
 - use `.projectroot` file instead of .here
-- change @here to `@projectroot`
+- change `@here` to `@projectroot`
 
 ### Features
 
