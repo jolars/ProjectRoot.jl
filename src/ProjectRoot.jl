@@ -43,11 +43,11 @@ function find_root(dir::String)
 end
 
 """
-    @here(args...)
+    @projectroot(args...)
 
 This macro returns a path relative to the root directory of the project.
 """
-macro here(args::String...)
+macro projectroot(args::String...)
   source_file = String(__source__.file)
 
   if startswith(source_file, "REPL")
@@ -59,6 +59,8 @@ macro here(args::String...)
   return joinpath(find_root(current_dir), args...)
 end
 
-export @here
+
+export @projectroot
 
 end
+

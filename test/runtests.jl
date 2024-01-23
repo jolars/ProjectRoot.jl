@@ -2,7 +2,7 @@ using ProjectRoot
 using Test
 
 @testset "ProjectRoot.jl" begin
-  here = ProjectRoot.@here()
+  project_root = @projectroot()
 
   @test endswith(here, "ProjectRoot") || endswith(here, "ProjectRoot.jl")
 
@@ -14,7 +14,7 @@ using Test
     touch(script_file)
 
     file = open(script_file, "w")
-    println(file, "using ProjectRoot;print(@here())")
+    println(file, "using ProjectRoot;print(@projectroot())")
     close(file)
 
     out = read(`julia --project=. $script_file`, String)
@@ -24,4 +24,4 @@ using Test
 
 end
 
-include(@here("test", "aqua.jl"))
+include(@projectroot("test", "aqua.jl"))

@@ -19,7 +19,7 @@ A stable release will be available on the Julia package registry soon.
 
 ## Getting Started
 
-The package provides a single macro, `@here`, that can be used to reference files in your project. The idea is to in some file `A.jl` be able to reference another file `B.jl` somewhere else in your project without having to care where file `A.jl` is or need to update the reference if you move `A.jl` somewhere else.
+The package provides a single macro, `@projectroot`, that can be used to reference files in your project. The idea is to in some file `A.jl` be able to reference another file `B.jl` somewhere else in your project without having to care where file `A.jl` is or need to update the reference if you move `A.jl` somewhere else.
 
 Take this example project:
 
@@ -35,12 +35,12 @@ MyProject
 If you want to include `B.jl` from `A.jl`, all you need to do is this:
 
 ```julia
-include(@here("src", "B.jl"))
+include(@projectroot("src", "B.jl"))
 ```
 
 Now, calling `A.jl` from anywhere in your project will work as expected. And if you move `A.jl` to another folder, say `scripts/subfolder`, the import will still work.
 
-`@here` also handles calling lines from `A.jl` through the REPL, by fetching the current working directory.
+`@projectroot` also handles calling lines from `A.jl` through the REPL, by fetching the current working directory.
 
 ## Contributing
 

@@ -2,5 +2,5 @@
 
 ```@docs
 ProjectRoot.ProjectRoot
-ProjectRoot.@here
+ProjectRoot.@projectroot
 ```
