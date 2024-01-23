@@ -57,7 +57,7 @@ If `@projectroot` is called from the REPL, it will instead simply return the cur
 
 ## Acknowledgements
 
-This package is mostly a direct port of the R package [here](https://here.r-lib.org/).
+This package is inspired by similar packages for other languages, such as the R package [here](https://here.r-lib.org/) and the Python package [pyprojroot](https://pypi.org/project/pyprojroot/).
 
 ## Alternatives
 
