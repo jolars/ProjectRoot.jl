@@ -10,7 +10,9 @@ cp(
 
 makedocs(
   sitename="ProjectRoot",
-  format=Documenter.HTML(),
+  format=Documenter.HTML(
+    assets=["assets/favicon.ico"],
+  ),
   modules=[ProjectRoot],
   pages=[
     "Home" => "index.md",
