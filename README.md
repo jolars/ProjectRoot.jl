@@ -12,7 +12,7 @@ You can install the package using the Julia package manager from the source code
 
 ```julia
 using Pkg
-Pkg.add("https://github.com/jolars/ProjectRoot.jl")
+Pkg.add(url = "https://github.com/jolars/ProjectRoot.jl")
 ```
 
 A stable release will be available on the Julia package registry soon.
