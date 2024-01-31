@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/jolars/ProjectRoot.jl/compare/v0.3.0...v0.3.1) (2024-01-31)
+
+
+### Bug Fixes
+
+* correctly construct path when in REPL ([10cf4e8](https://github.com/jolars/ProjectRoot.jl/commit/10cf4e8374261cf79381e49ea59be5b0f6e4c3c1))
+
 ## [0.3.0](https://github.com/jolars/ProjectRoot.jl/compare/v0.2.0...v0.3.0) (2024-01-23)
 
 ### ⚠ BREAKING CHANGES
