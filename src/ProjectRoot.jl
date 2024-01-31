@@ -51,7 +51,7 @@ macro projectroot(args::String...)
   source_file = String(__source__.file)
 
   if startswith(source_file, "REPL")
-    return pwd()
+    return joinpath(pwd(), args...)
   end
 
   current_dir = dirname(source_file)
