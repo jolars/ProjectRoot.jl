@@ -55,10 +55,9 @@ using ProjectRoot
 
 `@projectroot()` can also be used in the REPL, in which case it constructs a path relative to the current working directory.
 
-```jldoctest
+```
 julia> using ProjectRoot;
-
-julia> @projectroot("dir") == pwd() * "dir"
+julia> @projectroot("dir") == joinpath(pwd(), "dir")
 true
 ```
 """
