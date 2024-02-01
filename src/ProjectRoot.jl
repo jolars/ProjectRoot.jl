@@ -46,17 +46,36 @@ end
     @projectroot(args...)
 
 This macro returns a path relative to the root directory of the project.
+
+```julia
+@projectroot("dir", "file")
+```
+
+`@projectroot()` can also be used in the REPL, in which case it constructs a path relative to the current working directory.
+
+```jldoctest
+julia> @projectroot("dir") == pwd() * "dir"
+true
+```
 """
-macro projectroot(args::String...)
+macro projectroot(args::Union{AbstractString,Expr}...)
   source_file = String(__source__.file)
 
+  args_parsed = [isa(arg, Expr) ? eval(arg) : arg for arg in args]
+
+  for arg in args_parsed
+    if ~isa(arg, AbstractString)
+      throw(DomainError(args, "Arguments to @projectroot must be strings or expressions that evaluate to strings."))
+    end
+  end
+
   if startswith(source_file, "REPL")
-    return joinpath(pwd(), args...)
+    return joinpath(pwd(), args_parsed...)
   end
 
   current_dir = dirname(source_file)
 
-  return joinpath(find_root(current_dir), args...)
+  return joinpath(find_root(current_dir), args_parsed...)
 end
 
 

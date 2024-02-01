@@ -22,6 +22,11 @@ using Test
     @test out == dir
   end
 
+  # Check that the macro works with expressions
+  a = @projectroot("dirfile")
+  b = @projectroot("dir" * "file")
+  @test a == b
+
 end
 
 include(@projectroot("test", "aqua.jl"))
