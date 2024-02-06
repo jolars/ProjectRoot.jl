@@ -8,14 +8,18 @@ A package for Julia that provides easy file-referencing for project-oriented wor
 
 ## Installation
 
-You can install the package using the Julia package manager from the source code on GitHub:
+You can install the package using the Julia package manager:
+
+```julia
+]add ProjectRoot
+```
+
+Alternatively, you can also install the latest development version of the package from the source code on GitHub by calling
 
 ```julia
 using Pkg
 Pkg.add(url = "https://github.com/jolars/ProjectRoot.jl")
 ```
-
-A stable release will be available on the Julia package registry soon.
 
 ## Getting Started
 
