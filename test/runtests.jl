@@ -27,6 +27,11 @@ using Test
   b = @projectroot("dir" * "file")
   @test a == b
 
+  # Check that string interpolation works
+  file = "plot.png"
+  c = @projectroot("plot.png")
+  d = @projectroot("$(file)")
+  @test c == d
 end
 
 include(@projectroot("test", "aqua.jl"))

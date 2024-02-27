@@ -14,7 +14,7 @@ function find_root(dir::String)
     Dict("JuliaProject.toml" => :file),
     Dict("Manifest.toml" => :file),
     Dict(".git" => :dir),
-    Dict(".svn" => :dir)
+    Dict(".svn" => :dir),
   ]
 
   # Recursive search for root directory.
@@ -57,32 +57,22 @@ using ProjectRoot
 
 ```
 julia> using ProjectRoot;
-julia> @projectroot("dir") == joinpath(pwd(), "dir")
+julia> @projectroot("dir")
+julia> joinpath(pwd(), "dir")
 true
 ```
 """
-macro projectroot(args::Union{AbstractString,Expr}...)
-  source_file = String(__source__.file)
-
-  args_parsed = [isa(arg, Expr) ? eval(arg) : arg for arg in args]
-
-  for arg in args_parsed
-    if ~isa(arg, AbstractString)
-      throw(DomainError(args, "Arguments to @projectroot must be strings or expressions that evaluate to strings."))
-    end
+macro projectroot(args::Union{AbstractString,Expr,Symbol}...)
+  if isinteractive()
+    return esc(:(joinpath(pwd(), $(args...))))
   end
 
-  if startswith(source_file, "REPL")
-    return joinpath(pwd(), args_parsed...)
-  end
+  local source_file = String(__source__.file)
+  local base_dir = find_root(dirname(source_file))
 
-  current_dir = dirname(source_file)
-
-  return joinpath(find_root(current_dir), args_parsed...)
+  return esc(:(joinpath($(base_dir), $(args...))))
 end
-
 
 export @projectroot
 
 end
-
