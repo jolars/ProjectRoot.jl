@@ -63,7 +63,7 @@ true
 """
 macro projectroot(args::Union{AbstractString,Expr,Symbol}...)
   if isinteractive()
-    return esc(:(joinpath(pwd(), $(args...))))
+    return esc(:(joinpath(ProjectRoot.find_root(pwd()), $(args...))))
   end
 
   local source_file = String(__source__.file)
