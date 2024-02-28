@@ -17,6 +17,8 @@ function find_root(dir::String)
     Dict(".svn" => :dir),
   ]
 
+  base_dir = dir
+
   # Recursive search for root directory.
   while true
     prev_dir = dir
@@ -34,8 +36,8 @@ function find_root(dir::String)
     dir = dirname(dir)
 
     if dir == prev_dir
-      # Cannot go up any further; must be file system root.
-      return dir
+      # Cannot go up any further; must be file system root. Return the base directory
+      return base_dir
     end
   end
 
