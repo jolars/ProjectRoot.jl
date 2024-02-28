@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.4.0](https://github.com/jolars/ProjectRoot.jl/compare/v0.3.1...v0.4.0) (2024-02-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* return pwd() or __source__.file dir if we reach file system root
+* use recursive search logic when in REPL (interactive)
+
+### Features
+
+* return pwd() or __source__.file dir if we reach file system root ([b559f8a](https://github.com/jolars/ProjectRoot.jl/commit/b559f8a60187e08dd8841579acf4e674fc7208e7))
+* support expressions in `[@projectroot](https://github.com/projectroot)` ([b8e302e](https://github.com/jolars/ProjectRoot.jl/commit/b8e302efaefb63a3634dac21e674eb253d2ed05d))
+* support string interpolation ([8a48c81](https://github.com/jolars/ProjectRoot.jl/commit/8a48c81200cc5444199d58255e0e12ca0f6227fb))
+* use recursive search logic when in REPL (interactive) ([415c517](https://github.com/jolars/ProjectRoot.jl/commit/415c517b4a96b9c85240eb4919ca1988cf536785))
+
 ## [0.3.1](https://github.com/jolars/ProjectRoot.jl/compare/v0.3.0...v0.3.1) (2024-01-31)
 
 
