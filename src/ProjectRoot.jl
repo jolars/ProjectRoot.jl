@@ -57,8 +57,7 @@ using ProjectRoot
 
 ```
 julia> using ProjectRoot;
-julia> @projectroot("dir")
-julia> joinpath(pwd(), "dir")
+julia> @projectroot("dir") == joinpath(pwd(), "dir")
 true
 ```
 """
